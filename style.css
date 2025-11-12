@@ -87,93 +87,129 @@ body, html {
 }
 
 #about img {
-  width: 280px;
+  width: 400px;
   height: auto;
-  border-radius: 20px;
   object-fit: cover;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  margin-top: 20px; /* nach unten schieben */
+  border: 5px solid #642226; 
 }
 
 .about-text {
   max-width: 500px;
+  display: flex;
+  flex-direction: column;
 }
 
 .about-text h2 {
-  font-family: "Dancing Script", cursive;
-  font-size: 2.5rem;
-  color: var(--navy);
-  margin-bottom: 1rem;
+  font-family: "Birthstone", cursive;
+  font-size: 4rem;
+  color: #642226;
+  margin-bottom: 0.5rem;
 }
 
 .about-text p {
-  font-size: 1rem;
-  margin-bottom: 1.5rem;
+    font-family: "Alumni Sans", cursive;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .about-text .btn {
   text-decoration: none;
-  color: var(--white);
-  background-color: var(--navy);
-  padding: 0.6rem 1.5rem;
-  border-radius: 30px;
-  font-weight: 600;
+  color: #D6B896; /* Textfarbe */
+  background-color: #714E3A; /* gewünschte Hintergrundfarbe */
+  padding: 0.9rem 2.2rem; /* grösseres Button */
+  border-radius: 0; /* rechteckig, nicht abgerundet */
+  font-weight: 400;
+  font-size: 1.8rem; /* größere Schrift auf dem Button */
+  display: inline-block;
+  align-self: flex-end; /* Button rechts innerhalb des .about-text Blocks */
   transition: background 0.3s ease;
 }
 
 .about-text .btn:hover {
-  background-color: var(--light-brown);
+  background-color: #642226; 
 }
 
 /* =========  OFFERS SECTION  ========= */
 #offers {
+  position: relative; /* Container für absolut positionierte Überschrift */
   text-align: center;
-  padding: 4rem 2rem;
+  padding: 2rem 2rem; /* weniger Abstand oben, verschiebt den Bereich nach oben */
+  overflow: visible;
 }
 
+/* Verwende das echte H2 als großen, halbtransparenten Hintergrundtext */
 #offers h2 {
-  font-family: "Dancing Script", cursive;
-  font-size: 3rem;
-  color: var(--navy);
-  margin-bottom: 2rem;
+  position: absolute;
+  top: 88%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Birthstone", normal;
+  font-size: 25rem; /* große Hintergrund-Schrift */
+  color: #27466A ; 
+  font-weight: 400; /* normale Schriftstärke */
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0; /* hinter den Buttons */
+  margin: 0;
+}
+
+/* Buttons/Items über dem H2 platzieren */
+.offer-gallery,
+.offer-btn,
+.offer-btn img,
+.offer-btn span {
+  position: relative;
+  z-index: 3;
 }
 
 .offer-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
 .offer-btn {
-  border: none;
-  background: none;
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  border-radius: 20px;
+  border-radius: 0px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: block;
 }
 
 .offer-btn img {
   width: 100%;
-  height: 100%;
+  height: 480px; /* feste Bildhöhe, wie vorher */
   object-fit: cover;
-  border-radius: 20px;
+  border-radius: 0px;
+  display: block;
+  border: 5px solid #642226; /* Rahmen direkt am Bild, bündig */
+  box-sizing: border-box; /* Rahmen zählt zur Bildgröße */
   transition: transform 0.4s ease, opacity 0.4s ease;
 }
 
+
 .offer-btn span {
   position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  font-size: 1.3rem;
-  padding: 6px 20px;
-  border-radius: 10px;
-  font-family: "Dancing Script", cursive;
+  left: 5px; /* innerhalb des Bild-Rahmens */
+  right: 5px; /* innerhalb des Bild-Rahmens */
+  bottom: 20%; /* im unteren Drittel */
+  transform: translateY(50%);
+  color: #D6B896; /* Textfarbe */
+  background-color: #714E3A; /* gewünschte Hintergrundfarbe */
+  font-size: 1.8rem;
+  font-weight: 400; /* normale Schriftstärke */
+  padding: 0.6rem 0; /* Streifen über gesamte Breite des Bildes */
+  border-radius: 0px;
+  text-align: center;
+  font-family: "Birthstone", cursive;
+  box-sizing: border-box;
+  z-index: 4; /* sicher über dem Bild */
 }
 
 .offer-btn:hover img {
@@ -280,6 +316,16 @@ footer p {
 
   #about img {
     width: 80%;
+  }
+
+  /* Auf mobilen Bildschirmen Button zentrieren */
+  .about-text {
+    align-items: center;
+  }
+
+  .about-text .btn {
+    align-self: center;
+    font-size: 1.05rem; /* kleinere Schrift auf mobilen Geräten */
   }
 
   header.hero h1 {
