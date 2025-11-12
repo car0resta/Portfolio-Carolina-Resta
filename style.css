@@ -1,0 +1,85 @@
+/* Grundstil */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Birthstone', sans-serif;
+    height: 100%;
+}
+
+/* Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: none;
+    display: flex;
+    justify-content: flex; 
+    align-items: center;
+    gap: 50px;
+    padding: 0 400px;
+    z-index: 1000;
+    font-size: 2rem;
+    background-color: #E4D0BA;
+    width: 100%;          
+    height: 100px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-weight: 500;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Video nicht zu groß */
+    overflow: hidden;
+}
+
+.hero-video {
+    position: absolute;
+    top: 50%; /* nach unten verschieben (mehr = weiter unten) */
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -40%); /* weniger nach oben verschieben */
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(90%);
+}
+
+/* Overlay Text */
+.hero-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #D6B896;
+    z-index: 1;
+}
+
+.hero-overlay h1 {
+    font-size: 5rem;
+    margin: 0;
+    font-family: 'Birthstone', sans-serif;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f5f0eb;
+    color: #1a1a1a;
+}
