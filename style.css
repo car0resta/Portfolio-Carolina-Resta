@@ -152,7 +152,8 @@ body, html {
   white-space: nowrap;
   pointer-events: none;
   user-select: none;
-  z-index: 0; /* hinter den Buttons */
+  overflow: visible;   /* verhindert Abschneiden */
+  z-index: 1;   
   margin: 0;
 }
 
@@ -177,9 +178,13 @@ body, html {
   cursor: pointer;
   position: relative;
   overflow: hidden;
+  border: none;         /* <--- entfernt den Standardrahmen */
+  outline: none;        /* <--- entfernt den Fokusrahmen */
   border-radius: 0px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: block;
+  background: none;     /* <--- entfernt evtl. Hintergrundreste vom Button */
+  padding: 0;           /* <--- verhindert extra Innenabstände */
 }
 
 .offer-btn img {
@@ -220,6 +225,95 @@ body, html {
 .offer-btn:hover {
   transform: translateY(-5px);
 }
+
+/* =========  MEDIA CAROUSEL  ========= */
+#media-carousel {
+  background-color: #f6f1eb;
+  padding: 4rem 0;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+#media-carousel h2 {
+  font-family: "Birthstone", cursive;
+  font-size: 4rem;
+  color: #642226;
+  margin-bottom: 3rem;
+}
+
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  animation: scroll-carousel 40s linear infinite;
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  width: 400px;
+  height: 250px;
+  margin: 0 1rem;
+  overflow: hidden;
+  border: 5px solid #642226;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-item img,
+.carousel-item video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Animation – Endloslauf */
+@keyframes scroll-carousel {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* =========  PARTNER SECTION  ========= */
+#partners {
+  background-color: #E4D0BA;
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+#partners h3 {
+  font-family: "Birthstone", cursive;
+  font-size: 3rem;
+  color: #642226;
+  margin-bottom: 2rem;
+}
+
+.partner-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.partner-logos img {
+  width: 150px;
+  height: auto;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.partner-logos img:hover {
+  filter: grayscale(0%);
+}
+
+
 
 /* =========  TESTIMONIALS SECTION  ========= */
 #testimonials {
