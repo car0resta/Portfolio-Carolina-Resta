@@ -283,37 +283,82 @@ body, html {
   }
 }
 
-/* =========  PARTNER SECTION  ========= */
-#partners {
-  background-color: #E4D0BA;
+.carousel-btn-wrapper {
+  margin-top: 3rem;
   text-align: center;
+}
+
+.btn {
+  text-decoration: none;
+  color: #D6B896;
+  background-color: #714E3A;
+  padding: 0.9rem 2.2rem;
+  border-radius: 0;
+  font-weight: 400;
+  font-size: 1.8rem;
+  display: inline-block;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #642226;
+}
+
+
+/* ========= PARTNER SECTION ========= */
+##partners {
+  width: 100%;
+  background-color: #642226;
+}
+
+.partners-wrapper {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  background-color: #642226; /* weinrot */
+  align-items: center;
+  min-height: 400px;
   padding: 3rem 2rem;
+  gap: 3rem;
 }
 
-#partners h3 {
-  font-family: "Birthstone", cursive;
-  font-size: 3rem;
-  color: #642226;
-  margin-bottom: 2rem;
-}
-
-.partner-logos {
+/* LEFT */
+.partner-left {
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 3rem;
-  flex-wrap: wrap;
 }
 
-.partner-logos img {
-  width: 150px;
+.partner-left h3 {
+  font-family: "Birthstone", cursive;
+  font-weight: 400;
+  font-size: 4rem;
+  color: #E4D0BA;
+  margin: 0;
+}
+
+/* CENTER LOGO */
+.partner-logo-center img {
+  width: 250px;
   height: auto;
-  filter: grayscale(100%);
-  transition: filter 0.3s ease;
+  display: block;
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.35));
 }
 
-.partner-logos img:hover {
-  filter: grayscale(0%);
+.partner-logo-center a:hover img {
+  transform: scale(1.05);
+}
+
+/* RIGHT IMAGE */
+.partner-media {
+  display: flex;
+  justify-content: center;
+}
+
+.partner-reference {
+  width: 55%;          /* deutlich kleiner */
+  max-width: 280px;    /* edel & kompakt */
+  height: auto;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
 }
 
 
@@ -326,7 +371,7 @@ body, html {
 }
 
 #testimonials h2 {
-    position: relative;          /* bleibt im Layout */
+  position: relative;          /* bleibt im Layout */
   font-family: "Birthstone", cursive;
   font-size: 10rem;             /* realistische Größe über Text */
   color: #642226;
