@@ -306,7 +306,7 @@ body, html {
 
 
 /* ========= PARTNER SECTION ========= */
-##partners {
+#partners {
   width: 100%;
   background-color: #642226;
 }
@@ -337,7 +337,7 @@ body, html {
 
 /* CENTER LOGO */
 .partner-logo-center img {
-  width: 250px;
+  width: 275px;
   height: auto;
   display: block;
   transition: transform 0.3s ease;
@@ -360,7 +360,6 @@ body, html {
   height: auto;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
 }
-
 
 
 /* =========  TESTIMONIALS SECTION  ========= */
@@ -395,35 +394,79 @@ body, html {
   text-align: center;
 }
 
-/* =========  LIKE WHAT YOU SEE  ========= */
-#about img + img {
-  margin-left: 1rem;
+
+/* ========= LIKE WHAT YOU SEE ========= */
+
+#about {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: center;
+  padding: 5rem 6rem;
+  background-color: var(--beige);
+  gap: 4rem;
 }
 
+/* ---------- Images ---------- */
+.about-images {
+ position: relative;
+  max-width: 500px;
+}
+
+.about-images img {
+  width: 100%;
+  border: 3px solid var(--light-brown);
+  display: block;
+}
+
+/* oberes Bild */
+.img-top {
+  position: relative;
+  width: 95%;        /* kleiner */
+  left: 60px;        /* weiter nach rechts */
+  top: -10px;
+  z-index: 1;
+}
+
+/* unteres Bild leicht versetzt */
+.img-bottom {
+  position: absolute;
+  width: 90%;
+  right: -90px;      /* weiter nach rechts */
+  bottom: -70px;
+  z-index: 2;
+}
+
+/* ---------- Text & Button ---------- */
 .like {
-  text-align: center;
-  margin-top: 2rem;
+  text-align: left;
 }
 
 .like p {
-  font-family: "Dancing Script", cursive;
-  font-size: 2.2rem;
-  color: var(--navy);
-  margin-bottom: 1rem;
+  font-family: "Birthstone", cursive;
+  font-size: 4rem;
+  color: #27466A;
+  margin-bottom: 3rem;
+  position: relative;
+  top: -0.5px;
+  z-index: 10;
 }
 
 .like .btn {
-  text-decoration: none;
-  color: var(--white);
-  background-color: var(--navy);
-  padding: 0.7rem 1.8rem;
-  border-radius: 30px;
+   text-decoration: none;
+  color: #D6B896;
+  background-color: #714E3A;
+  padding: 0.9rem 2.2rem;
+  border-radius: 0;
+  font-weight: 400;
+  font-size: 1.8rem;
+  display: inline-block;
   transition: background 0.3s ease;
 }
 
 .like .btn:hover {
-  background: var(--light-brown);
+   background-color: #642226;
 }
+
 
 /* =========  FOOTER  ========= */
 footer {
