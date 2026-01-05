@@ -72,6 +72,7 @@ body, html {
   position: relative;
   width: 699px;
   height: 402px;
+    border:#642226 3.5px solid;
 }
 
 .card-img {
@@ -79,6 +80,10 @@ body, html {
   height: 100%;
   object-fit: cover;
   display: block;
+}
+
+.img-jerry-aisha {
+  object-position: center 30%;
 }
 
 /* Titel im unteren Drittel */
@@ -101,30 +106,197 @@ body, html {
 /* Contact Section */
 .contact-section {
   text-align: center;
-  margin-top: 3rem;
+  margin-top: 0.5rem;
 }
 
 .contact-text {
-  font-size: 1.2rem;
-  font-style: italic;
-  color: #555;
-  margin-bottom: 1rem;
+  font-size: 6rem;
+  font-weight: 400;
+  color: #27466A;
+  margin-bottom: 0.5rem;
 }
 
 .contact-button {
   background-color: var(--brown);
   color: var(--light-beige);
-  padding: 0.5rem 1.5rem;
+  padding: 0.5rem 3.5rem;
   border: none;
   border-radius: 0.375rem;
   cursor: pointer;
+  font-family: birthstone, cursive;
+  font-size: 2rem;
 }
 
 .contact-button:hover {
-  background-color: #593826;
+  background-color: #642226;
 }
 
 
+
+/* =========  Multimedia Award 2025 ========= */
+
+/* HERO SECTION */
+.event-hero {
+ padding: 8rem 2rem 2rem;
+}
+
+.event-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.event-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Text */
+.event-title {
+  font-family: 'Birthstone', cursive;
+  font-weight: 400;
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+  color:#642226
+}
+
+.event-description {
+  font-family: 'Alumni Sans', sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.event-interest {
+  font-family: 'Birthstone', cursive;
+  font-size: 2.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  color: #642226;
+}
+
+/* Button */
+.event-button {
+  display: inline-block;
+  background-color: var(--brown);
+  color: var(--light-beige);
+  padding: 0.75rem 2rem;
+  text-decoration: none;
+  font-family: 'birthstone', sans-serif;
+  font-size: 1.3rem;
+}
+
+/* EVENT INSIGHT */
+.event-insight {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-family: 'Birthstone', cursive;
+  font-size: 4rem;
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  color: #642226;
+}
+
+/* Video */
+.video-wrapper {
+  position: relative;
+  padding-top: 56.25%;
+  margin-bottom: 3rem;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Galerie */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+
+/* =========  FOOTER  ========= */
+.footer {
+  background-color:  #ece2d6;
+  padding: 2rem 1rem 1.5rem;
+  text-align: center;
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 40px; /* Abstand fein steuerbar */
+  justify-content: center;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto 1rem;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 20px;
+  font-family: 'Birthstone', cursive;
+  color: #642226;
+}
+
+.footer-nav.left {
+  justify-content: flex-start;
+}
+
+.footer-nav.right {
+  justify-content: flex-end;
+}
+
+.footer-nav a {
+  text-decoration: none;
+  color: var(--red);
+  font-size: 1.7rem;
+  transition: opacity 0.3s ease;
+}
+
+.footer-nav a:hover {
+  opacity: 0.7;
+}
+
+/* Social Logos */
+.socials {
+  display: flex;
+  gap: 18px;
+}
+
+.socials img {
+  width: 88px;
+  transition: transform 0.3s ease;
+}
+
+.socials a:hover img {
+  transform: translateY(-3px);
+}
+
+/* Copyright */
+.footer .copyright {
+  font-family: 'Birthstone', cursive;
+  color: var(--red);
+  font-size: 1.1rem;
+}
 
 /* =========  RESPONSIVE  ========= */
 
