@@ -4,85 +4,81 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CarolinaResta Studios</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../css/aboutme.css">
   <link href="https://fonts.googleapis.com/css2?family=Birthstone&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
 
+
  <header>
     <nav class="navbar">
-      <a href="index.html">Home</a>
-      <a href="aboutme.html">About me</a>
-      <a href="index.html"><img src="media/logo.png" alt="Logo" class="logo"></a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="contact.html">Contact</a>
+      <a href="../index.html">Home</a>
+      <a href="html/aboutme.html">About me</a>
+     <a href="../index.html"><img src="../media/logo.png" alt="Logo" class="logo"></a>
+      <a href="html/portfolio.html">Portfolio</a>
+      <a href="html/contact.html">Contact</a>
     </nav>
     
+
 <!-- HERO VIDEO -->
 <section class="hero-video">
   <div class="video-wrapper">
-    <iframe
-      src="https://youtu.be/tCznDVCw410"
-      allowfullscreen>
+    <iframe id="hero-video"
+            src="https://www.youtube.com/embed/tCznDVCw410?rel=0&modestbranding=1"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
     </iframe>
   </div>
 </section>
 
+
 <!-- HOVER BILDER -->
 <section class="hover-section">
+  <h2 class="hover-bg-text">Nice to know</h2>
+
   <div class="hover-grid">
     <div class="hover-item">
-      <img src="media/aboutme/Website_mittwoch03.jpg" alt="">
-      <div class="hover-text">Text zu Bild 1</div>
+      <img src="../media/aboutme/Website_mittwoch08.jpg" alt="">
+      <div class="hover-text">Ich singe eigentlich 24/7 – Musik begleitet mich ständig! Ich spiele Klavier, Gitarre und Saxophon, und Funfact: Ich habe mal Xylophon in einer Jugendmusik gespielt.</div>
     </div>
 
     <div class="hover-item">
-      <img src="media/aboutme/Website_mittwoch02.jpg" alt="">
-      <div class="hover-text">Text zu Bild 2</div>
+      <img src="../media/aboutme/Website_mittwoch02.jpg" alt="">
+      <div class="hover-text">Während 1.5 Jahren habe ich im Rahmen meines Studiums mit zwei Mitstudierenden jeden Mittwochabend eine eigene Radiosendung bei Radio Calanda produziert</div>
     </div>
 
     <div class="hover-item">
-      <img src="media/aboutme/Website_mittwoch06.jpg" alt="">
-      <div class="hover-text">Text zu Bild 3</div>
+      <img src="../media/aboutme/Website_mittwoch06.jpg" alt="">
+      <div class="hover-text">Hals- und Beinbruch! 
+Wenn ich mich in einem Bereich als Nerd bezeichnen würde, dann definitiv für Theater und Musicals. Und ich wette, ich kann mehr Hamilton-Songs auswendig mitsingen als du^^</div>
     </div>
 
     <div class="hover-item">
-      <img src="media/aboutme/Website_mittwoch01.jpg" alt="">
-      <div class="hover-text">Text zu Bild 4</div>
+      <img src="../media/aboutme/Website_mittwoch01.jpg" alt="">
+      <div class="hover-text">I LOVE JESUS! Mein Glaube an Jesus prägt und motiviert mich in allem, was ich tue.</div>
     </div>
   </div>
 </section>
 
-<!-- HERZENSPROJEKTE -->
-<section class="projects-section">
-  <h2>Herzensprojekte</h2>
-
-  <div class="projects">
-    <a href="projekt1.html" class="project-btn">Projekt Eins</a>
-    <a href="projekt2.html" class="project-btn">Projekt Zwei</a>
-  </div>
-</section>
 
 <!-- Das biete ich dir -->
 
 <section class="info-section">
   <div class="info-image">
-    <img src="media/aboutme/Website_mittwoch110.jpg" alt="Behind the scenes">
+    <img src="../media/aboutme/Website_mittwoch110.jpg" alt="Behind the scenes">
   </div>
 
   <div class="info-content">
     <h2>Das biete ich dir als Multimedia Producerin</h2>
-    <p>
-      Kreative Konzepte, authentische Umsetzungen und ein Auge fürs Detail –
-      alles aus einer Hand.
-    </p>
-
+    
     <div class="info-boxes">
-      <div class="info-box">Foto & Video</div>
-      <div class="info-box">Content Creation</div>
-      <div class="info-box">Storytelling</div>
-      <div class="info-box">Social Media</div>
+      <div class="info-box">Enge Begleitung von Anfang an</div>
+      <div class="info-box">Professionelle Beratung</div>
+      <div class="info-box">Offene und flexible Dienstleistung</div>
+      <div class="info-box">Spass und Gute Stimmung</div>
     </div>
   </div>
 </section>
@@ -93,15 +89,64 @@
     <h2>Mein Versprechen an meine Kunden</h2>
 
     <div class="promise-boxes">
-      <div class="promise-box">100 % authentisch</div>
-      <div class="promise-box">Ehrliche Beratung</div>
-      <div class="promise-box">Individuelle Konzepte</div>
+      <div class="promise-box">Klar & Professionel</div>
+      <div class="promise-box">Kreativ & authentisch</div>
+      <div class="promise-box">Unterstützend & Kundenzentriert</div>
       <div class="promise-box">Wohlfühl-Atmosphäre</div>
     </div>
   </div>
 
   <div class="promise-image">
-    <img src="media/aboutme/Website_mittwoch103.jpg" alt="Mein Versprechen">
+    <img src="../media/aboutme/Website_mittwoch103.jpg" alt="Mein Versprechen">
   </div>
 </section>
+
+<script>
+const playBtn = document.getElementById('play-btn');
+const video = document.getElementById('hero-video');
+
+playBtn.addEventListener('click', () => {
+    // Video mit Autoplay starten
+    video.src += "?autoplay=1";
+    // Button ausblenden
+    playBtn.style.display = 'none';
+});
+</script>
+
+</body>
+
+  <!-- Footer -->
+<footer class="footer">
+  <div class="footer-inner">
+
+    <!-- Links -->
+    <nav class="footer-nav left">
+      <a href="../index.html">Home</a>
+      <a href="html/aboutme.html">About me</a>
+    </nav>
+
+    <!-- Social Icons -->
+    <div class="socials">
+      <a href="https://www.linkedin.com/in/carolina-resta-b8002223b" target="_blank">
+        <img src="../media/logo/3.png" alt="LinkedIn">
+      </a>
+      <a href="https://www.tiktok.com/@caro_resta" target="_blank">
+        <img src="../media/logo/2.png" alt="TikTok">
+      </a>
+      <a href="https://www.instagram.com/resta.caro" target="_blank">
+        <img src="../media/logo/1.png" alt="Instagram">
+      </a>
+    </div>
+
+    <!-- Rechts -->
+    <nav class="footer-nav right">
+      <a href="html/portfolio.html">Portfolio</a>
+      <a href="html/contact.html">Contact</a>
+    </nav>
+
+  </div>
+
+  <p class="copyright">Copyright © CarolinaRestaStudios</p>
+</footer>
+
 
