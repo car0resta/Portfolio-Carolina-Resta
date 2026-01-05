@@ -1,0 +1,181 @@
+/* Grundstil */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Birthstone', sans-serif;
+    height: 100%;
+}
+
+/* Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: none;
+    display: flex;
+    justify-content: flex; 
+    align-items: center;
+    gap: 50px;
+    padding: 0 400px;
+    z-index: 1000;
+    font-size: 2rem;
+    background-color: #ece2d6;
+    width: 100%;          
+    height: 100px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-weight: 500;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+}
+
+
+/* HERO VIDEO */
+.hero-video {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  height: 85vh; /* Hero-Höhe */
+  overflow: hidden;
+}
+
+.video-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* OPTIONAL: leicht abgerundete Unterkante */
+.hero-video {
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  overflow: hidden;
+}
+
+/* HOVER BILDER */
+.hover-section {
+  padding: 60px 8%;
+  margin-top: -80px; /* zieht Bilder leicht ins Video rein */
+}
+
+.hover-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* Hover-Effekt bleibt gleich */
+.hover-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.hover-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.hover-item:hover img {
+  transform: scale(1.1);
+}
+
+.hover-text {
+  position: absolute;
+  inset: 0;
+  background: rgba(31, 47, 68, 0.75);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  padding: 20px;
+}
+
+.hover-item:hover .hover-text {
+  opacity: 1;
+}
+
+
+/* Das biete ich dir*/
+
+.info-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.info-box {
+  background: #cfa87e;
+  color: #1f2f44;
+  padding: 12px 20px;
+  border-radius: 18px;
+  font-size: 0.85rem;
+  font-weight: 500;
+
+  cursor: default;
+  user-select: none;
+}
+
+
+/*Versprechen an Kunden*/
+.promise-boxes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.promise-box {
+  background: #8b3a3a;
+  color: white;
+  padding: 16px;
+  border-radius: 16px;
+  font-size: 0.9rem;
+  text-align: center;
+  font-weight: 500;
+
+  cursor: default;
+  user-select: none;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .video-wrapper {
+    height: 50vh;
+  }
+
+  .hover-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .promise-section {
+    grid-template-columns: 1fr;
+  }
+
+  .promise-image {
+    order: -1; /* Bild oben auf Mobile */
+  }
+
+  .promise-boxes {
+    grid-template-columns: 1fr;
+  }
+}
