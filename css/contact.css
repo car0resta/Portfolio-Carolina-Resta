@@ -145,7 +145,22 @@ body, html {
   font-size: 1.3rem;
 }
 
+.mail-button {
+  display: block;
+  text-align: center;
+  background-color: #714E3A;
+  color: #E4D0BA;
+  padding: 1rem;
+  font-family: 'Alumni Sans', sans-serif;
+  font-size: 1.3rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
 
+.mail-button:hover {
+  opacity: 0.85;
+}
 
 
 

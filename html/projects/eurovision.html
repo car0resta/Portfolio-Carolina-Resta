@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eurovision Song Contest 2025</title>
+  <link rel="stylesheet" href="/css/portfolio.css">
+  <link href="https://fonts.googleapis.com/css2?family=Birthstone&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <a href="../../index.html">Home</a>
+    <a href="../aboutme.html">About me</a>
+    <a href="../../index.html"><img src="../../media/logo.png" alt="Logo" class="logo"></a>
+    <a href="../portfolio.html" class="active">Portfolio</a>
+    <a href="../contact.html">Contact</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HERO SECTION -->
+  <section class="event-hero">
+    <div class="event-hero-grid">
+
+      <!-- Bild links -->
+      <div class="event-image">
+        <img src="../../media/portfolio/eurovision/eurovision03.jpg" alt="ESC Bild">
+      </div>
+
+      <!-- Text rechts -->
+      <div class="event-content">
+        <h1 class="event-title">Eurovision Song Contest 2025</h1>
+
+        <p class="event-description">
+          Im Rahmen meines Majors Live Communication erhielt ich die Möglichkeit, beim Eurovision Song Contest in Basel mitzuwirken – ein Erlebnis, das für mich lange kaum greifbar war. Bereits zu Beginn des Semesters durfte ich Teil des Konzeptionsteams sein und an inhaltlichen Sitzungen mitdenken, wodurch ich früh Einblicke in die Planung eines internationalen Grossanlasses erhielt.
+        </p>
+
+        <p class="event-description">
+          Am ESC-Wochenende selbst war ich als Moderatorin im ENG-Team im Einsatz und berichtete live vom Turquoise Carpet. Gemeinsam mit meiner Kamerafrau und Assistentin bildeten wir ein eingespieltes Team und begleiteten die Parade-Route sowie Interviews vor Ort. Trotz intensiver Vorbereitung war die Nervosität gross – insbesondere in dem Moment, als mir bewusst wurde, dass rund 50’000 Zuschauer:innen live zusahen.
+        </p>
+
+        <p class="event-description">
+          Als mein Name schliesslich in den Endcredits erschien, wurde mir klar, Teil eines aussergewöhnlichen Projekts gewesen zu sein.
+        </p>
+
+        <p class="event-interest">Interesse?</p>
+
+        <a href="../contact.html" class="event-button">
+          Let's get in Touch
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- GALLERY SECTION -->
+  <section class="event-insight">
+    <h2 class="section-title">Behind the Scenes</h2>
+
+    <div class="gallery-grid">
+      <img src="../../media/portfolio/eurovision/eurovision01.jpg" alt="ESC Bild 2" class="zoomable">
+      <img src="../../media/portfolio/eurovision/eurovision02.jpg" alt="ESC Bild 3" class="zoomable">
+      <img src="../../media/portfolio/eurovision/eurovision03.jpg" alt="ESC Bild 4" class="zoomable">
+      <img src="../../media/portfolio/eurovision/eurovision04.jpg" alt="ESC Bild 5" class="zoomable">
+    </div>
+  </section>
+
+  <!-- VIDEO SECTION -->
+  <section class="event-insight">
+    <h2 class="section-title">Ein Tag am ESC</h2>
+
+    <div class="insight-grid">
+      <!-- Linkes Video -->
+      <div class="video-wrapper">
+        <iframe 
+         src="https://www.youtube.com/embed/8P3kiqOHVzQ?si=ZQgYrWv2tL0GeLOn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+          </iframe>
+        <p class="video-caption">Livestream Turquoise Carpet</p>
+      </div>
+
+      <!-- Rechtes Video -->
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/SGJG9ZLQ-vg?si=BupVn8ot-deKhC5U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <p class="video-caption">Dokfilm über unsere Arbeit</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ZOOM MODAL -->
+<div id="zoom-modal" class="zoom-modal">
+  <span class="close">&times;</span>
+  <img class="zoom-modal-content" id="zoom-img">
+</div>
+
+<script>
+  // Zoom functionality
+  const modal = document.getElementById("zoom-modal");
+  const modalImg = document.getElementById("zoom-img");
+  const images = document.querySelectorAll(".zoomable");
+  const closeBtn = document.querySelector(".close");
+
+  images.forEach(img => {
+    img.addEventListener("click", () => {
+      modal.style.display = "block";
+      modalImg.src = img.src;
+    });
+  });
+
+  closeBtn.onclick = () => modal.style.display = "none";
+</script>
+
+</body>
+</html>
+
+
+

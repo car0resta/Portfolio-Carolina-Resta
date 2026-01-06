@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Annie</title>
+  <link rel="stylesheet" href="/css/portfolio.css">
+  <link href="https://fonts.googleapis.com/css2?family=Birthstone&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <a href="../../index.html">Home</a>
+    <a href="../aboutme.html">About me</a>
+    <a href="../../index.html"><img src="../../media/logo.png" alt="Logo" class="logo"></a>
+    <a href="../portfolio.html" class="active">Portfolio</a>
+    <a href="../contact.html">Contact</a>
+  </nav>
+</header>
+
+<!-- HERO SECTION -->
+  <section class="event-hero">
+    <div class="event-hero-grid">
+
+      <!-- Bild links -->
+      <div class="event-image">
+        <img src="../../media/portfolio/annie/titelbild.jpg" alt="Annie">
+      </div>
+
+      <!-- Text rechts -->
+      <div class="event-content">
+        <h1 class="event-title">Annie</h1>
+
+        <p class="event-description">
+         Annie wünschte sich neue Bilder für ihren CV – modern, authentisch und mit einem besonderen Touch. Gemeinsam überlegten wir, welche Umgebung zu ihr passt und in welcher Atmosphäre sie sich wohlfühlt. Schnell war klar: Die Pflanzenwelt ist genau ihr Element. Der Botanische Garten bot dafür die ideale Kulisse – natürliches Licht, vielseitige Hintergründe und eine ruhige, inspirierende Umgebung. So entstanden professionelle Aufnahmen, die Annies Persönlichkeit und Stil auf natürliche Weise unterstreichen und ihren Lebenslauf visuell aufwerten.
+        <p class="event-interest">Interesse?</p>
+
+        <a href="../contact.html" class="event-button">
+          Hier zu deinem Fotoshooting
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- GALLERY SECTION -->
+  <section class="event-insight">
+    <h2 class="section-title">Galerie</h2>
+
+    <div class="gallery-grid">
+      <img src="../../media/portfolio/annie/Website_dienstag27.jpg" alt="Bild 27" class="zoomable">
+      <img src="../../media/portfolio/annie/Website_dienstag29.jpg" alt="Bild 29" class="zoomable">
+      <img src="../../media/portfolio/annie/Website_dienstag30.jpg" alt="Bild 30" class="zoomable">
+      <img src="../../media/portfolio/annie/Website_dienstag31.jpg" alt="Bild 31" class="zoomable">
+      <img src="../../media/portfolio/annie/Website_dienstag32.jpg" alt="Bild 32" class="zoomable">
+      <img src="../../media/portfolio/annie/Website_dienstag33.jpg" alt="Bild 33" class="zoomable">
+      <img src="../../media/portfolio/annie/Website_dienstag34.jpg" alt="Bild 34" class="zoomable">
+      <img src="../../media/portfolio/annie/Website_dienstag35.jpg" alt="Bild 35" class="zoomable">
+      <img src="../../media/portfolio/annie/Website_dienstag36.jpg" alt="Bild 36" class="zoomable">
+      <img src="../../media/portfolio/annie/Website_dienstag37.jpg" alt="Bild 37" class="zoomable">
+      <img src="../../media/portfolio/annie/Website_dienstag39.jpg" alt="Bild 39" class="zoomable">
+      <img src="../../media/portfolio/annie/Website_dienstag40.jpg" alt="Bild 40" class="zoomable">
+      <img src="../../media/portfolio/annie/Website_dienstag41.jpg" alt="Bild 41" class="zoomable">
+      <img src="../../media/portfolio/annie/Website_dienstag42.jpg" alt="Bild 42" class="zoomable">
+      <img src="../../media/portfolio/annie/Website_dienstag43.jpg" alt="Bild 43" class="zoomable">
+      <img src="../../media/portfolio/annie/Website_dienstag44.jpg" alt="Bild 44" class="zoomable">
+    </div>
+  </section>
+
+</main>
+
+<!-- ZOOM MODAL -->
+<div id="zoom-modal" class="zoom-modal">
+  <span class="close">&times;</span>
+  <img class="zoom-modal-content" id="zoom-img">
+</div>
+
+<script>
+  // Zoom functionality
+  const modal = document.getElementById("zoom-modal");
+  const modalImg = document.getElementById("zoom-img");
+  const images = document.querySelectorAll(".zoomable");
+  const closeBtn = document.querySelector(".close");
+
+  images.forEach(img => {
+    img.addEventListener("click", () => {
+      modal.style.display = "block";
+      modalImg.src = img.src;
+    });
+  });
+
+  closeBtn.onclick = () => modal.style.display = "none";
+</script>
+
+</body>
+</html>

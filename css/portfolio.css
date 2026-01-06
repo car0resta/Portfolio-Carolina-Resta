@@ -1,6 +1,6 @@
 /* Farbvariablen */
 :root {
-  --light-beige: #E4D0BA;
+  --light-beige: #D6B896;
   --brown: #714E3A;
 }
 
@@ -114,6 +114,7 @@ body, html {
   font-weight: 400;
   color: #27466A;
   margin-bottom: 0.5rem;
+  text-align: center;
 }
 
 .contact-button {
@@ -137,7 +138,7 @@ body, html {
 
 /* HERO SECTION */
 .event-hero {
- padding: 8rem 2rem 2rem;
+ padding: 5rem 2rem 2rem;
 }
 
 .event-hero-grid {
@@ -161,7 +162,7 @@ body, html {
   font-weight: 400;
   font-size: 4rem;
   margin-bottom: 0.5rem;
-  color:#642226
+  color: #642226;
 }
 
 .event-description {
@@ -232,6 +233,180 @@ body, html {
   object-fit: cover;
 }
 
+/* =========  EHC Arosa  ========= */
+
+:root {
+  --dark-blue: #27466A;
+  --wine-red: #642226;
+  --brown: #7a4a2e;
+  --light: #f5efe8;
+}
+
+/* HERO */
+.event-hero {
+  padding: 6rem 2rem 4rem;
+}
+
+.event-hero-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr; 
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+
+.hero-video video {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  aspect-ratio: 9 / 16;
+}
+
+/* Text */
+.event-title {
+  font-family: 'Birthstone', cursive;
+  font-size: 4.5rem;
+  color: var(--dark-blue);
+  margin-bottom: 0.5rem;
+}
+
+.event-description {
+  font-family: 'Alumni Sans', sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.event-interest {
+  font-family: 'Birthstone', cursive;
+  font-size: 2.5rem;
+  color: var(--dark-blue);
+  margin-bottom: 1rem;
+}
+
+/* Button */
+.event-button {
+  display: inline-block;
+  background-color: var(--brown);
+  color: var(--light);
+  padding: 0.75rem 2rem;
+  text-decoration: none;
+  font-family: 'Birthstone', cursive;
+  font-size: 1.4rem;
+}
+
+/* INSIGHT */
+.event-insight {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-family: 'Birthstone', cursive;
+  font-size: 4rem;
+  text-align: center;
+  color: var(--dark-blue);
+  margin-bottom: 3rem;
+}
+
+/* Grid */
+.insight-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+/* Video */
+.video-wrapper {
+  position: relative;
+  padding-top: 56.25%;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Carousel */
+.carousel {
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 1rem;
+  animation: scroll 10s linear infinite;
+}
+
+.carousel img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+}
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+
+
+/* =========  Eurovision  ========= */
+/* ZOOM MODAL */ 
+.zoom-modal { 
+  display: none; 
+  position: fixed; 
+  z-index: 2000; 
+  padding-top: 60px; 
+  left: 0; 
+  top: 0; 
+  width: 100%; 
+  height: 100%; 
+  background-color: rgba(0,0,0,0.9); 
+}
+
+.zoom-modal-content { 
+  margin: auto; 
+  display: block; 
+  max-width: 90%; 
+  max-height: 90%; 
+} 
+.close { 
+  position: absolute; 
+  top: 30px; 
+  right: 40px; 
+  color: #fff; 
+  font-size: 3rem; 
+  font-weight: bold; 
+  cursor: pointer; 
+}
+
+
+
+/* =========  Jerry & Aisha  ========= */
+
+.event-hero-grid .event-image img {
+    width: 90%; 
+    height: 60%; 
+    max-width: 500px; 
+    margin: 0 auto; 
+    display: block;
+}
+
+
+
+
+/* =========  Fusemerch  ========= */
+
+/* ========= Car Rouge  ========= */
+
+
+/* =========  Feuerwehr Wuernlos  ========= */
 
 /* =========  FOOTER  ========= */
 .footer {
@@ -303,5 +478,15 @@ body, html {
 @media(min-width:768px) {
   .portfolio-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .event-hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .event-title {
+    font-size: 3.2rem;
   }
 }

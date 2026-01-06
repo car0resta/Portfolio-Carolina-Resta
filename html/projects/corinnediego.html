@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corinne & Diego</title>
+  <link rel="stylesheet" href="/css/portfolio.css">
+  <link href="https://fonts.googleapis.com/css2?family=Birthstone&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <a href="../../index.html">Home</a>
+    <a href="../aboutme.html">About me</a>
+    <a href="../../index.html"><img src="../../media/logo.png" alt="Logo" class="logo"></a>
+    <a href="../portfolio.html" class="active">Portfolio</a>
+    <a href="../contact.html">Contact</a>
+  </nav>
+</header>
+
+ <!-- HERO SECTION -->
+  <section class="event-hero">
+    <div class="event-hero-grid">
+
+      <!-- Bild links -->
+      <div class="event-image">
+        <img src="../../media/portfolio/corinne und diego/Website45.jpg" alt="Corinne & Diego">
+      </div>
+
+      <!-- Text rechts -->
+      <div class="event-content">
+        <h1 class="event-title">Corinne & Diego</h1>
+
+        <p class="event-description">
+         Zur optimalen Kirschblütenzeit planten wir ein romantisches Shooting, das ihre Vorstellungen perfekt ergänzte. Sie brachten ihre Ideen ein, ich meine, und gemeinsam entstand ein kreativer und unterhaltsamer Shootingtag. Die resultierenden Fotos spiegeln ihre Persönlichkeit und die spielerische Leichtigkeit ihres Zusammenseins wider.
+        <p class="event-interest">Interesse?</p>
+
+        <a href="../contact.html" class="event-button">
+          Hier zu deinem Fotoshooting
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- GALLERY SECTION -->
+  <section class="event-insight">
+    <h2 class="section-title">Galerie</h2>
+
+    <div class="gallery-grid">
+      <img src="../../media/portfolio/corinne und diego/Website46.jpg" alt="Bild 46" class="zoomable">
+      <img src="../../media/portfolio/corinne und diego/Website48.jpg" alt="Bild 48" class="zoomable">
+      <img src="../../media/portfolio/corinne und diego/Website50.jpg" alt="Bild 50" class="zoomable">
+      <img src="../../media/portfolio/corinne und diego/Website51.jpg" alt="Bild 51" class="zoomable">
+      <img src="../../media/portfolio/corinne und diego/Website52.jpg" alt="Bild 52" class="zoomable">
+      <img src="../../media/portfolio/corinne und diego/Website53.jpg" alt="Bild 53" class="zoomable">
+      <img src="../../media/portfolio/corinne und diego/Website57.jpg" alt="Bild 57" class="zoomable">
+      <img src="../../media/portfolio/corinne und diego/Website62.jpg" alt="Bild 62" class="zoomable">
+      <img src="../../media/portfolio/corinne und diego/Website66.jpg" alt="Bild 66" class="zoomable">
+      <img src="../../media/portfolio/corinne und diego/Website68.jpg" alt="Bild 68" class="zoomable">
+      <img src="../../media/portfolio/corinne und diego/Website73.jpg" alt="Bild 73" class="zoomable">
+      <img src="../../media/portfolio/corinne und diego/Website91.jpg" alt="Bild 91" class="zoomable">
+      <img src="../../media/portfolio/corinne und diego/Website92.jpg" alt="Bild 92" class="zoomable">
+      <img src="../../media/portfolio/corinne und diego/Website101.jpg" alt="Bild 101" class="zoomable">
+      <img src="../../media/portfolio/corinne und diego/Website102.jpg" alt="Bild 102" class="zoomable">
+      <img src="../../media/portfolio/corinne und diego/Website108.jpg" alt="Bild 108" class="zoomable">
+      <img src="../../media/portfolio/corinne und diego/Website120.jpg" alt="Bild 120" class="zoomable">
+      <img src="../../media/portfolio/corinne und diego/Website130.jpg" alt="Bild 130" class="zoomable">
+      <img src="../../media/portfolio/corinne und diego/Website132.jpg" alt="Bild 132" class="zoomable">
+      <img src="../../media/portfolio/corinne und diego/Website133.jpg" alt="Bild 133" class="zoomable">
+      <img src="../../media/portfolio/corinne und diego/Website135.jpg" alt="Bild 135" class="zoomable">
+      <img src="../../media/portfolio/corinne und diego/Website136.jpg" alt="Bild 136" class="zoomable">
+    </div>
+  </section>
+
+</main>
+
+<!-- ZOOM MODAL -->
+<div id="zoom-modal" class="zoom-modal">
+  <span class="close">&times;</span>
+  <img class="zoom-modal-content" id="zoom-img">
+</div>
+
+<script>
+  // Zoom functionality
+  const modal = document.getElementById("zoom-modal");
+  const modalImg = document.getElementById("zoom-img");
+  const images = document.querySelectorAll(".zoomable");
+  const closeBtn = document.querySelector(".close");
+
+  images.forEach(img => {
+    img.addEventListener("click", () => {
+      modal.style.display = "block";
+      modalImg.src = img.src;
+    });
+  });
+
+  closeBtn.onclick = () => modal.style.display = "none";
+</script>
+
+</body>
+</html>

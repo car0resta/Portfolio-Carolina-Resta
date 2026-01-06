@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fuse Merch</title>
+  <link rel="stylesheet" href="/css/portfolio.css">
+  <link href="https://fonts.googleapis.com/css2?family=Birthstone&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <a href="../../index.html">Home</a>
+    <a href="../aboutme.html">About me</a>
+    <a href="../../index.html"><img src="../../media/logo.png" alt="Logo" class="logo"></a>
+    <a href="../portfolio.html" class="active">Portfolio</a>
+    <a href="../contact.html">Contact</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HERO SECTION -->
+  <section class="event-hero">
+    <div class="event-hero-grid">
+
+      <!-- Bild links -->
+      <div class="event-image">
+        <img src="../../media/portfolio/fuse merch/titelbild.jpg" alt="Fuse Merch Bild">
+      </div>
+
+      <!-- Text rechts -->
+      <div class="event-content">
+        <h1 class="event-title" style="color: var(--dark-blue);">Fuse Merch</h1>
+
+        <p class="event-description">
+         Als Leiterin des Creative Teams meiner Jugendarbeit in der Kirche hatten wir die Idee, einen eigenen Merch für unsere Jugendlichen zu gestalten. Im August 2024 starteten wir mit der ersten Designsitzung und arbeiteten rund vier Monate intensiv daran, das perfekte Design zu entwickeln und einen passenden Anbieter für den Druck unserer Pullis zu finden.
+        Schlussendlich entschieden wir uns für das finale Design und gaben die Pullis in den Siebdruck. Danach widmeten wir uns der Vermarktung: Zwei meiner Freundinnen fotografierten die Produkte professionell, ich übernahm die Bildbearbeitung sowie das Filmen und Schneiden des Werbevideos.
+        Das Ergebnis ist eine kreative, authentische Kollektion – aber überzeugt euch am besten selbst von den Fotos und Videos in der Galerie!
+        </p>
+
+        <p class="event-interest" style="color: var(--dark-blue);">Interesse?
+
+        <a href="../contact.html" class="event-button">
+          Kreieren wir was Schönes zusammen.
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- VIDEO SECTION -->
+  <section class="event-insight">
+    <h2 class="section-title" style="color: var(--dark-blue);">Produktvideo</h2>
+
+    <div class="video-wrapper">
+      <iframe 
+        src="https://www.youtube.com/embed/YOUR_VIDEO_LINK_HERE" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" 
+        allowfullscreen>
+      </iframe>
+    </div>
+  </section>
+
+  <!-- GALERIE SECTION -->
+  <section class="event-insight">
+    <h2 class="section-title" style="color: var(--dark-blue);">Produktfotos</h2>
+
+    <div class="gallery-grid">
+      <img src="../../media/portfolio/fuse merch/fuse01.jpg" alt="Fuse Merch 1" class="zoomable">
+      <img src="../../media/portfolio/fuse merch/fuse02.jpg" alt="Fuse Merch 2" class="zoomable">
+      <img src="../../media/portfolio/fuse merch/fuse03.jpg" alt="Fuse Merch 3" class="zoomable">
+      <img src="../../media/portfolio/fuse merch/fuse04.jpg" alt="Fuse Merch 4" class="zoomable">
+    </div>
+  </section>
+
+</main>
+
+<!-- ZOOM MODAL -->
+<div id="zoom-modal" class="zoom-modal">
+  <span class="close">&times;</span>
+  <img class="zoom-modal-content" id="zoom-img">
+</div>
+
+<script>
+  // Zoom functionality
+  const modal = document.getElementById("zoom-modal");
+  const modalImg = document.getElementById("zoom-img");
+  const images = document.querySelectorAll(".zoomable");
+  const closeBtn = document.querySelector(".close");
+
+  images.forEach(img => {
+    img.addEventListener("click", () => {
+      modal.style.display = "block";
+      modalImg.src = img.src;
+    });
+  });
+
+  closeBtn.onclick = () => modal.style.display = "none";
+</script>
+
+</body>
+</html>
