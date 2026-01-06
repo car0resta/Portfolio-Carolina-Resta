@@ -54,7 +54,7 @@ body, html {
     transform: translate(-50%, -40%); /* weniger nach oben verschieben */
     object-fit: cover;
     z-index: -1;
-    filter: brightness(90%);
+    filter: brightness(110%);
 }
 
 /* Overlay Text */
@@ -80,12 +80,13 @@ body, html {
   );
   z-index: 0;
 }
+
 .hero-overlay h1 {
-    font-size: 4rem;
     margin: 0;
     font-family: 'Birthstone', cursive;
     font-weight: 400;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+    font-size: 4rem;
 }
 
 #about,
@@ -95,58 +96,59 @@ body, html {
 }
 
 /* =========  ABOUT SECTION  ========= */
-#about {
+#intro {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start; 
   justify-content: center;
-  gap: 2rem;
-  padding: 5rem 2rem;
   background-color: #ece2d6;
+   padding: 5rem 4rem 5rem 2rem;
+  gap: 0.5rem;
 }
 
-#about img {
+#intro img {
   width: 400px;
   height: auto;
   object-fit: cover;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  margin-top: 20px; /* nach unten schieben */
+  margin-right: 1rem; 
   border: 5px solid #642226; 
+  position: relative; 
+  z-index: 1;
 }
 
-.about-text {
+#intro .about-text {
   max-width: 500px;
   display: flex;
   flex-direction: column;
 }
 
-.about-text h2 {
+#intro .about-text h2 {
   font-family: "Birthstone", cursive;
   font-size: 4rem;
   color: #642226;
   margin-bottom: 0.5rem;
 }
 
-.about-text p {
-    font-family: "Alumni Sans", cursive;
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
+#intro .about-text p {
+  font-family: "Alumni Sans", cursive;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
-.about-text .btn {
+#intro .about-text .btn {
   text-decoration: none;
-  color: #D6B896; /* Textfarbe */
-  background-color: #714E3A; /* gewünschte Hintergrundfarbe */
-  padding: 0.9rem 2.2rem; /* grösseres Button */
-  border-radius: 0; /* rechteckig, nicht abgerundet */
+  color: #D6B896;
+  background-color: #714E3A;
+  padding: 0.9rem 2.2rem;
+  border-radius: 0;
   font-weight: 400;
-  font-size: 1.8rem; /* größere Schrift auf dem Button */
+  font-size: 1.8rem;
   display: inline-block;
-  align-self: flex-end; /* Button rechts innerhalb des .about-text Blocks */
+  align-self: flex-end;
   transition: background 0.3s ease;
 }
 
-.about-text .btn:hover {
+#intro .about-text .btn:hover {
   background-color: #642226; 
 }
 
@@ -156,24 +158,24 @@ body, html {
   text-align: center;
   padding: 2rem 2rem; /* weniger Abstand oben, verschiebt den Bereich nach oben */
   overflow: visible;
+  background-color: #ece2d6;
 }
 
 /* Verwende das echte H2 als großen, halbtransparenten Hintergrundtext */
-#offers h2 {
-  position: absolute;
-  top: 88%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: "Birthstone", normal;
-  font-size: 21rem; /* große Hintergrund-Schrift */
-  color: #27466A ; 
-  font-weight: 350; /* normale Schriftstärke */
-  white-space: nowrap;
-  pointer-events: none;
-  user-select: none;
-  overflow: visible;   /* verhindert Abschneiden */
-  z-index: 1;   
-  margin: 0;
+#offers h2 { 
+  position: absolute; 
+  top: 45%; /* weiter nach unten */
+  left: 50%; 
+  transform: translateX(-50%); /* nur horizontal zentrieren, vertikal keine Verschiebung */
+  font-family: "Birthstone", normal; 
+  font-size: 21rem; 
+  color: #27466A; 
+  font-weight: 350; 
+  white-space: nowrap; 
+  pointer-events: none; 
+  user-select: none; 
+  z-index: 1; 
+  margin: 0; 
 }
 
 /* Buttons/Items über dem H2 platzieren */
@@ -247,7 +249,7 @@ body, html {
 
 /* =========  MEDIA CAROUSEL  ========= */
 #media-carousel {
-  background-color: #f6f1eb;
+  background-color: #ece2d6;
   padding: 4rem 0;
   text-align: center;
   overflow: hidden;
@@ -414,53 +416,50 @@ body, html {
 }
 
 
-/* ========= LIKE WHAT YOU SEE ========= */
-
-#about {
+/* =========  LIKE WHAT YOU SEE ========= */
+#like-see {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
   align-items: center;
-  padding: 5rem 6rem;
-  background-color: var(--beige);
-  gap: 4rem;
+  padding: 5rem 6rem 8rem;
+  background-color: #ece2d6;
+  gap: 2rem;
 }
 
 /* ---------- Images ---------- */
-.about-images {
- position: relative;
+#like-see .like-images {
+  position: relative;
   max-width: 500px;
 }
 
-.about-images img {
+#like-see .like-images img {
   width: 100%;
-  border: 3px solid var(--light-brown);
+  border: 3px solid #642226;
   display: block;
 }
 
-/* oberes Bild */
-.img-top {
+#like-see .img-top {
   position: relative;
-  width: 50%;        /* kleiner */
-  left: 60px;        /* weiter nach rechts */
-  top: -10px;
+  width: 25%;        
+  left: 40px;       
+  top: -20px;
   z-index: 1;
 }
 
-/* unteres Bild leicht versetzt */
-.img-bottom {
+#like-see .img-bottom {
   position: absolute;
-  width: 90%;
-  right: -90px;      /* weiter nach rechts */
-  bottom: -70px;
-  z-index: 2;
+  width: 65%;       
+  right: -200px;     
+  bottom: -50px;
+  z-index: 1;
 }
 
 /* ---------- Text & Button ---------- */
-.like {
+#like-see .like {
   text-align: left;
 }
 
-.like p {
+#like-see .like p {
   font-family: "Birthstone", cursive;
   font-size: 4rem;
   color: #27466A;
@@ -470,8 +469,8 @@ body, html {
   z-index: 10;
 }
 
-.like .btn {
-   text-decoration: none;
+#like-see .btn {
+  text-decoration: none;
   color: #D6B896;
   background-color: #714E3A;
   padding: 0.9rem 2.2rem;
@@ -482,15 +481,15 @@ body, html {
   transition: background 0.3s ease;
 }
 
-.like .btn:hover {
-   background-color: #642226;
+#like-see .btn:hover {
+  background-color: #642226;
 }
 
 
 /* =========  FOOTER  ========= */
 .footer {
-  background-color:  #ece2d6;
-  padding: 2rem 1rem 1.5rem;
+  background-color: #ece2d6;
+  padding: 1rem 1rem 1rem;
   text-align: center;
 }
 
@@ -560,35 +559,29 @@ body, html {
   #about {
     flex-direction: column;
     text-align: center;
+    gap: 1rem; /* Abstand vertikal */
   }
 
   #about img {
     width: 80%;
+    margin-right: 0; /* kein rechter Abstand mehr */
   }
 
-  /* Auf mobilen Bildschirmen Button zentrieren */
   .about-text {
     align-items: center;
   }
 
   .about-text .btn {
     align-self: center;
-    font-size: 1.05rem; /* kleinere Schrift auf mobilen Geräten */
+    font-size: 1.05rem;
   }
+}
 
-  header.hero h1 {
-    font-size: 2rem;
-  }
-
-  #offers h2 {
-    font-size: 2.5rem;
-  }
 
   #testimonials p {
     text-align: justify;
     padding: 1.5rem;
   }
-}
 
 /* Footer */
 footer {
@@ -596,4 +589,30 @@ footer {
     padding: 20px;
     background-color: #E4D0BA;
     color: #1a1a1a;
+}
+
+@media (max-width: 768px) {
+  #intro,
+  #like-see {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  #intro img,
+  #like-see .like-images img {
+    width: 80%;
+    margin-right: 0;
+  }
+
+  #intro .about-text,
+  #like-see .like {
+    align-items: center;
+  }
+
+  #intro .about-text .btn,
+  #like-see .btn {
+    align-self: center;
+    font-size: 1.05rem;
+  }
 }
