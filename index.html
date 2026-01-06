@@ -19,11 +19,12 @@
     </button>
 
     <a href="../index.html">Home</a>
-    <a href="aboutme.html">About me</a>
+    <a href="/html/aboutme.html">About me</a>
     <a href="../index.html"><img src="../media/logo.png" alt="Logo" class="logo"></a>
-    <a href="portfolio.html" class="active">Portfolio</a>
-    <a href="contact.html">Contact</a>
+    <a href="/html/portfolio.html" class="active">Portfolio</a>
+    <a href="/html/contact.html">Contact</a>
   </nav>
+
 </header>
 
 
@@ -200,10 +201,10 @@
 
 <script>
   const burger = document.querySelector('.burger');
-  const navLinks = document.querySelector('.nav-links');
+  const navbar = document.querySelector('.navbar');
 
   burger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
+    navbar.classList.toggle('menu-open');
   });
 </script>
 
