@@ -13,17 +13,17 @@ body, html {
     background-color: #ece2d6;
 }
 
-/* Navigation */
+
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
     transform: none;
     display: flex;
-    justify-content: flex; 
+    justify-content: center;
     align-items: center;
-    gap: 50px;
-    padding: 0 400px;
+    gap: 5rem;
+    padding: 0 1rem;
     z-index: 1000;
     font-size: 2rem;
     background-color: #ece2d6;
@@ -37,9 +37,39 @@ body, html {
     font-weight: 500;
 }
 
-.logo {
+/* Alle Links standardmäßig sichtbar auf Desktop */
+.navbar > a {
+    display: inline-block;
+    text-decoration: none;
+    color: #1a1a1a;
+    font-weight: 500;
+}
+
+/* Logo Größe */
+.navbar .logo {
     width: 150px;
     height: auto;
+}
+
+/* ----------- BURGER BUTTON ----------- */
+.burger {
+    display: none; /* Desktop: unsichtbar */
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1002;
+}
+
+.burger span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #1a1a1a;
+    border-radius: 2px;
 }
 
 /* Portfolio Grid */
@@ -49,8 +79,8 @@ body, html {
 
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(799px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
   justify-content: center;
 }
 
@@ -70,9 +100,11 @@ body, html {
 
 .card {
   position: relative;
-  width: 699px;
   height: 402px;
-    border:#642226 3.5px solid;
+  border:#642226 3.5px solid;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
 }
 
 .card-img {
@@ -126,6 +158,7 @@ body, html {
   cursor: pointer;
   font-family: birthstone, cursive;
   font-size: 2rem;
+  text-decoration: none;
 }
 
 .contact-button:hover {
@@ -534,6 +567,50 @@ body, html {
 
 /* =========  RESPONSIVE  ========= */
 
+/*Header*/
+
+@media (max-width: 768px) {
+
+    /* Navbar vertikal, linksbündig */
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start; /* alles linksbündig */
+        padding: 1rem;
+        gap: 0.5rem;
+        justify-content: flex-start; /* Burger oben links */
+    }
+
+    /* Burger sichtbar */
+    .burger {
+        display: flex;
+        order: -1;       /* zuerst im Flex */
+        margin-bottom: 1rem;
+        cursor: pointer;
+    }
+
+    /* Logo zentriert unter Burger */
+    .navbar .logo {
+        margin: 0 auto 1rem auto;
+        width: 120px;
+    }
+
+    /* Alle Links außer Logo ausblenden, wenn Menü geschlossen */
+    .navbar > a:not(.logo) {
+        display: none;
+    }
+
+    /* Menü offen: Links erscheinen alle linksbündig */
+    .navbar.menu-open > a {
+        display: block !important; /* wichtig: überschreibt display:none */
+        width: 100%;
+        text-align: left;
+        padding: 1rem 0;
+        background-color: #ece2d6;
+        font-size: 1.8rem;
+    }
+}
+
+/* Portfolio Grid Anpassung */
 @media(min-width:768px) {
   .portfolio-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -548,4 +625,201 @@ body, html {
   .event-title {
     font-size: 3.2rem;
   }
+}
+
+/* Ehc Arosa */
+@media (max-width: 768px) {
+  .insight-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .section-title {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-track {
+    animation-duration: 18s;
+  }
+
+  .carousel img {
+    width: 240px;
+    height: 160px;
+  }
+}
+
+
+/* Opernreise Car Rouge */
+/* ====================== CAR ROUGE RESPONSIVE ====================== */
+@media (max-width: 1024px) {
+  .car-rouge-hero-grid {
+    gap: 3rem; /* weniger Abstand zwischen Video und Text */
+  }
+
+  .event-title {
+    font-size: 4rem; /* Text etwas kleiner für Tablets */
+  }
+
+  .event-description {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+
+  .event-interest {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .car-rouge-hero-grid {
+    grid-template-columns: 1fr; /* Video über Text */
+    gap: 2rem;
+  }
+
+  .video-wrapper {
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Verhältnis */
+  }
+
+  .car-rouge-hero-grid iframe {
+    width: 100%;
+    height: 100%;
+  }
+
+  .event-title {
+    font-size: 3.2rem;
+  }
+
+  .event-description {
+    font-size: 1.1rem;
+  }
+
+  .event-interest {
+    font-size: 1.8rem;
+  }
+
+  .event-button {
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .event-title {
+    font-size: 2.6rem;
+  }
+
+  .event-description {
+    font-size: 1rem;
+  }
+
+  .event-interest {
+    font-size: 1.6rem;
+  }
+
+  .event-button {
+    font-size: 1.1rem;
+    padding: 0.75rem 1.5rem;
+  }
+}
+
+/* Feuerwehr Wuernlos */
+/* =========  Feuerwehr Würenlingen Responsiv ========= */
+
+@media (max-width: 1024px) {
+    /* Hero Grid anpassen */
+    .feuerwehr-hero-grid {
+        grid-template-columns: 1fr; /* Video oben, Text unten */
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    /* Textgrößen anpassen */
+    .feuerwehr-hero-grid .event-title {
+        font-size: 3.5rem;
+        text-align: center;
+    }
+
+    .feuerwehr-hero-grid .event-description {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .feuerwehr-hero-grid .event-interest {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .feuerwehr-hero-grid .event-button {
+        display: block;
+        margin: 1.5rem auto 0 auto;
+        text-align: center;
+        font-size: 1.3rem;
+    }
+
+    /* Video Wrapper */
+    .feuerwehr-hero-grid .video-wrapper {
+        padding-top: 56.25%; /* 16:9 Verhältnis */
+        width: 100%;
+    }
+
+    .feuerwehr-hero-grid .video-wrapper iframe {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/* Optional: kleinere Mobilgeräte (<480px) */
+@media (max-width: 480px) {
+    .feuerwehr-hero-grid .event-title {
+        font-size: 2.8rem;
+    }
+
+    .feuerwehr-hero-grid .event-description {
+        font-size: 1rem;
+    }
+
+    .feuerwehr-hero-grid .event-interest {
+        font-size: 1.8rem;
+    }
+
+    .feuerwehr-hero-grid .event-button {
+        font-size: 1.1rem;
+        padding: 0.6rem 1.5rem;
+    }
+}
+
+
+/* Footer */
+@media (max-width: 768px) {
+
+    .footer-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* alles zentriert */
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    /* Footer-Navigation ausblenden */
+    .footer-nav {
+        display: none;
+    }
+
+    /* Social-Icons zentrieren */
+    .socials {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    /* Copyright zentriert */
+    .footer .copyright {
+        text-align: center;
+        margin-top: 0.5rem;
+    }
 }

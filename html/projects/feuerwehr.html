@@ -11,13 +11,20 @@
 <body>
 
 <header>
-  <nav class="navbar">
-    <a href="../../index.html">Home</a>
-    <a href="../aboutme.html">About me</a>
-    <a href="../../index.html"><img src="../../media/logo.png" alt="Logo" class="logo"></a>
-    <a href="../portfolio.html" class="active">Portfolio</a>
-    <a href="../contact.html">Contact</a>
+ <nav class="navbar">
+    <button class="burger" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <a href="../index.html">Home</a>
+    <a href="/html/aboutme.html">About me</a>
+    <a href="../index.html"><img src="../media/logo.png" alt="Logo" class="logo"></a>
+    <a href="/html/portfolio.html" class="active">Portfolio</a>
+    <a href="/html/contact.html">Contact</a>
   </nav>
+
 </header>
 
 <main>
@@ -48,5 +55,17 @@
 
 
 </main>
+
+
+<script>
+  const burger = document.querySelector('.burger');
+  const navbar = document.querySelector('.navbar');
+
+  burger.addEventListener('click', () => {
+    navbar.classList.toggle('menu-open');
+  });
+</script>
+
+
 </body>
 </html>
