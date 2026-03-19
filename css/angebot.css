@@ -116,44 +116,49 @@ body, html {
     font-family: 'Birthstone', cursive;
     font-weight: 400;
     text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
-    font-size: 9rem;
+    font-size: 15rem;
+    margin-top: 55%;
 }
 h1, h2, h3 {
     font-family: 'Birthstone', cursive;
     font-weight: 400;
 }
 
-#about,
-#offers,
-#media-carousel {
-    background-color: #ece2d6;
-}
-
 
 /* ----------- Intro ----------- */
 .intro{
     display:grid;
-    grid-template-columns: 1fr 1fr;
-    gap:4rem;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap:1rem;
     padding:6rem 10%;
-    background:#d9c6b3;
+    background:#ece2d6;
     align-items:center;
 }
 
 .intro-img img{
-    width:100%;
+    width: 350px;
+    height: 514px;
+    border: 4px solid #7a2e2e; 
+
+}
+
+.intro-text {
+    text-align: left;
 }
 
 .intro-text h2{
     font-family:'Birthstone', cursive;
     font-size:3rem;
     color:#27466A;
+    margin-bottom: 0.5rem;
 }
 
 .intro-text p{
     font-family:'Alumni Sans', sans-serif;
     font-size:1.3rem;
     line-height:1.6;
+    text-align: left;
+    margin-top: 0;
 }
 
 /* ----------- Packages ----------- */
@@ -162,121 +167,195 @@ h1, h2, h3 {
     grid-template-columns:repeat(3,1fr);
     gap:2rem;
     padding:4rem 10%;
-    background:#d9c6b3;
+    background:#ece2d6;
     text-align:center;
 }
 
 .package img{
     width:100%;
-    height:250px;
+    height: 400px; 
     object-fit:cover;
     border:4px solid #7a2e2e;
+    margin-bottom: 0.5rem;
 }
+
+.package:nth-child(2) img {
+    object-position:  center -180px; 
+}
+
 .package h3{
     font-family:'Birthstone';
-    font-size:2rem;
     color:#27466A;
+    font-size: 2.5rem;
+    margin-top: 1rem;
+    margin-bottom: 0.2rem;
 }
 
 .package p{
     font-family:'Alumni Sans';
+    border-top: 1px solid #7a2e2e;
+    padding: 0.3rem 0;   /* weniger Abstand */
+    margin: 0;           /* wichtig! */
+    font-size: 1.3rem;
 }
 
+
+
 .price{
-    font-weight:bold;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.price::after {
+    content: "";
+    margin-left: 0.5rem;
+    transition: 0.3s;
+}
+
+.price:hover::after {
+    content: attr(data-price);
 }
 
 /* ----------- Included ----------- */
 
 .included{
-    background:#7a2e2e;
-    color:white;
-    padding:3rem 10%;
+    background:#642226;
+    color:#D6B896;
+    padding:1.5rem 10%;
 }
 
 .included h2{
     font-family:'Birthstone';
-    font-size:2.5rem;
-    text-align:center;
-    margin-bottom:2rem;
+    font-size:4rem;
+    text-align:left;
+    margin-bottom:0.5rem;
+    margin-top: 0%;
 }
 
 .included ul{
     max-width:700px;
-    margin:auto;
+    margin: 0;          /* ❗ entfernt zentrierung */
+    padding-left: 1.2rem;
     list-style:disc;
     font-family:'Alumni Sans';
-    font-size:1.2rem;
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+.included p {
+    font-family: 'Alumni Sans';
+    color: #D6B896;
+    font-size: 1.5rem; /* gleiche Größe wie Liste oder leicht größer */
+    max-width: 700px;
+    margin-top: 1.5rem;
+    text-align: left;
+    white-space: nowrap;
+}
+
+/* ----------- Video Section ----------- */
+.video-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    padding: 5rem 10%;
+    background: #ece2d6;
+    align-items: center;
+}
+
+.video-wrapper iframe {
+    width: 100%;
+    height: 300px;
+    border: 4px solid #7a2e2e;
+}
+
+.video-text h3,
+.match-text h3 {
+     font-family:'Birthstone';
+    color:#27466A;
+    font-size: 2.5rem;
+    margin-top: 1rem;
+    margin-bottom: 0.2rem;
+}
+
+.video-text hr,
+.match-text hr {
+    border: 0;
+    border-top: 1px solid #7a2e2e;
+    margin-bottom: 0.8rem;
+    width: 50%;
+    text-align: left;
+}
+
+.video-text p,
+.match-text p {
+    font-family:'Alumni Sans';
+    border-top: 1px solid #7a2e2e;
+    padding: 0.3rem 0;   /* weniger Abstand */
+    margin: 0;           /* wichtig! */
+    font-size: 1.3rem;
 }
 
 
-/* ----------- Video ----------- */
-.video-section{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:3rem;
-    padding:5rem 10%;
-    background:#d9c6b3;
-    align-items:center;
-}
-
-.video-img img{
-    width:100%;
-}
-
-.video-text h3{
-    font-family:'Birthstone';
-    font-size:2.5rem;
-}
 
 /* ----------- Perfect Match ----------- */
 .match{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:3rem;
-    padding:5rem 10%;
-    background:#d9c6b3;
-    align-items:center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    padding: 5rem 10%;
+    background: #ece2d6;
+    align-items: center;
 }
 
-.match-img img{
-    width:100%;
+.match-img img {
+    width: 100%;
+    max-width: 400px;
+    border: 4px solid #7a2e2e;
+    display: block;
+    margin-right: auto;
 }
 
-.match-text h3{
-    font-family:'Birthstone';
-    font-size:2.5rem;
+.match-img {
+    order: 1;
 }
 
-/* ---------- Like what you see ---------- */
+.match-text {
+    order: 2;
+}
+
+/* ----------- Like what you see ----------- */
 #like-see .like {
-  text-align: left;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #like-see .like p {
-  font-family: "Birthstone", cursive;
-  font-size: 4rem;
-  color: #27466A;
-  margin-bottom: 3rem;
-  position: relative;
-  top: -0.5px;
-  z-index: 10;
+    font-family: "Birthstone", cursive;
+    font-size: 4rem;
+    color: #27466A;
+    margin-bottom: 1.5rem;
 }
 
 #like-see .btn {
-  text-decoration: none;
-  color: #D6B896;
-  background-color: #714E3A;
-  padding: 0.9rem 2.2rem;
-  border-radius: 0;
-  font-weight: 400;
-  font-size: 1.8rem;
-  display: inline-block;
-  transition: background 0.3s ease;
+    text-decoration: none;
+    color: #D6B896;
+    background-color: #714E3A;
+    padding: 0.9rem 2.2rem;
+    border-radius: 0;
+    font-weight: 400;
+    font-size: 1.8rem;
+    display: inline-block;
+    transition: background 0.3s ease;
 }
 
 #like-see .btn:hover {
-  background-color: #642226;
+    background-color: #642226;
+}
+
+#like-see {
+    padding-bottom: 6rem; /* mehr Abstand zum Footer */
 }
 
 
@@ -463,6 +542,24 @@ h1, h2, h3 {
     padding: 1.2rem 3rem;
     font-size: 1.5rem;
   }
+}
+
+/* -------- Video Section -------- */
+@media (max-width: 900px) {
+    .video-section, .match {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .match-img img {
+        margin: 0 auto;
+    }
+
+    .video-text hr,
+    .match-text hr {
+        width: 80%;
+        margin: 0.5rem auto;
+    }
 }
 
 /* Footer */
