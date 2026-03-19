@@ -125,6 +125,8 @@ h1, h2, h3 {
 }
 
 
+
+/* =========  WEDDING PAGE  ========= */
 /* ----------- Intro ----------- */
 .intro{
     display:grid;
@@ -198,7 +200,6 @@ h1, h2, h3 {
     margin: 0;           /* wichtig! */
     font-size: 1.3rem;
 }
-
 
 
 .price{
@@ -359,6 +360,53 @@ h1, h2, h3 {
 }
 
 
+/* =========  SHOOTINGPAGE  ========= */
+
+.hero-shooting img {
+    object-position: center -350px;
+    width:100%;
+    height:100vh;
+    object-fit:cover;
+}
+.hero-shooting h1 {
+  color: #D6B896; 
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 25rem;
+}
+
+.gruppe-shooting {
+  height: 75vh; /* z. B. halb so hoch wie Bildschirm */
+}
+
+.gruppe-shooting img {
+  object-position: center -300px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gruppe-shooting h1 {
+  color: #D6B896; 
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.gruppe-shooting .packages {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.gruppe-shooting .package {
+  width: 300px;
+  text-align: center;
+}
 /* =========  FOOTER  ========= */
 .footer {
   background-color: #ece2d6;
