@@ -151,7 +151,7 @@ h1, h2, h3 {
 .intro-text h2{
     font-family:'Birthstone', cursive;
     font-size:3rem;
-    color:#27466A;
+    color:#642226;
     margin-bottom: 0.5rem;
 }
 
@@ -187,7 +187,7 @@ h1, h2, h3 {
 
 .package h3{
     font-family:'Birthstone';
-    color:#27466A;
+    color:#642226;
     font-size: 2.5rem;
     margin-top: 1rem;
     margin-bottom: 0.2rem;
@@ -272,7 +272,7 @@ h1, h2, h3 {
 .video-text h3,
 .match-text h3 {
      font-family:'Birthstone';
-    color:#27466A;
+    color:#642226;
     font-size: 2.5rem;
     margin-top: 1rem;
     margin-bottom: 0.2rem;
@@ -324,6 +324,8 @@ h1, h2, h3 {
     order: 2;
 }
 
+
+
 /* ----------- Like what you see ----------- */
 #like-see .like {
     text-align: center;
@@ -335,7 +337,7 @@ h1, h2, h3 {
 #like-see .like p {
     font-family: "Birthstone", cursive;
     font-size: 4rem;
-    color: #27466A;
+    color: #642226;
     margin-bottom: 1.5rem;
 }
 
@@ -389,7 +391,7 @@ h1, h2, h3 {
 }
 
 .gruppe-shooting h1 {
-  color: #D6B896; 
+  color: #27466A; 
   position: absolute;
   top: 80%;
   left: 50%;
@@ -407,6 +409,65 @@ h1, h2, h3 {
   width: 300px;
   text-align: center;
 }
+
+.shooting-packages {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 4rem 10%;
+  background: #ece2d6;
+  text-align: center;
+  flex-wrap: nowrap;
+}
+
+.shooting-packages .package {
+  width: 340px;
+  
+}
+
+.shooting-packages .package img {
+  object-fit: cover;
+  object-position: center -90px;
+}
+
+.single-shooting {
+  height: 75vh; /* z. B. halb so hoch wie Bildschirm */
+}
+
+.single-shooting img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.single-shooting h1 {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.package:nth-child(1) img {
+ object-position: center;
+  max-width: 300px;
+}
+
+.package.special img {
+  object-position: left center;
+  max-width: 300px;
+}
+
+
+
+/* =========  EVENTPAGE  ========= */
+
+.event-intro-img img {
+    width: 100%;
+    height: 75vh;
+    object-fit: cover;
+    object-position: center -200px;
+}
+
 /* =========  FOOTER  ========= */
 .footer {
   background-color: #ece2d6;
