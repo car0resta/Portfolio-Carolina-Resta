@@ -425,6 +425,21 @@ h1, h2, h3 {
   
 }
 
+/* ===== NUR EINZELSHOOTING ===== */
+.single.shooting-packages {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap; /* wichtig für responsive */
+    align-items: flex-start;
+}
+
+/* jede Box */
+.single.shooting-packages .package {
+    width: 340px;
+}
+
 .shooting-packages .package img {
   object-fit: cover;
   object-position: center -90px;
@@ -479,9 +494,82 @@ h1, h2, h3 {
 
 
 /*-- Event */
+.event-page .gruppe-shooting h1 {
+  color: #D6B896;
+}
 
+.event-page .shooting-packages .package img,
+.event-page .shooting-packages .video-wrapper iframe {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border: 4px solid #7a2e2e;
+}
 
+.event-page .package:not(.special) h3 {
+    margin-top: 0.3rem;
+}
 
+/*-- Social Media */
+
+.event-page .single-shooting h1 {
+  white-space: nowrap;
+}
+
+.event-page .single.shooting-packages .video-wrapper {
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 9 / 16;
+  margin: 0 auto;
+}
+
+.event-page .single.shooting-packages .video-wrapper iframe {
+  width: 100%;
+  height: 100%;
+}
+
+/* ===== BRANDED FACE VIDEO SECTION ===== */
+
+.shooting-packages .video-container {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.single.shooting-packages > p {
+    font-family: 'Alumni Sans', sans-serif;
+    font-size: 1.6rem;
+    text-align: left; /* linksbündig */
+    margin-bottom: 2rem;
+}
+
+.single.shooting-packages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.video-container.branded-face {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.video-wrapper.branded-face {
+    flex: 1;
+    max-width: 400px;
+}
+
+.video-wrapper.branded-face iframe {
+    width: 100%;
+    aspect-ratio: 9 / 16;
+    height: auto;
+    border: 4px solid #7a2e2e;
+}
 /* =========  FOOTER  ========= */
 .footer {
   background-color: #ece2d6;
@@ -682,6 +770,19 @@ h1, h2, h3 {
     .match-text hr {
         width: 80%;
         margin: 0.5rem auto;
+    }
+}
+
+
+/* Branded Face*/
+@media (max-width: 900px) {
+    .single.shooting-packages .video-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .single.shooting-packages .video-wrapper {
+        width: 100%;
     }
 }
 
