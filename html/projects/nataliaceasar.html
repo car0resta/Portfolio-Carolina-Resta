@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Rouge</title>
+  <link rel="stylesheet" href="/css/portfolio.css">
+  <link href="https://fonts.googleapis.com/css2?family=Birthstone&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+ <nav class="navbar">
+    <button class="burger" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <a href="/index.html">Home</a>
+    <a href="/html/aboutme.html">About me</a>
+    <a href="/index.html"><img src="/media/logo.png" alt="Logo" class="logo"></a>
+    <a href="/html/portfolio.html" class="active">Portfolio</a>
+    <a href="/html/contact.html">Contact</a>
+  </nav>
+
+</header>
+
+<main>
+
+<section class="event-hero">
+  <div class="car-rouge-hero-grid">
+
+    <!-- Video links -->
+    <div class="event-image">
+      <div class="video-wrapper">
+        <iframe 
+         src="https://www.youtube.com/embed/3029GIJtGIM?si=ECyrWIhqp43f4rLz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+
+ <div class="event-content">
+      <h1 class="event-title">Natalia & Ceasar</h1>
+
+      <p class="event-description">
+        Im Rahmen der Zivilhochzeit von Natalia und Ceasar durfte ich ihren besonderen Tag filmisch begleiten und in einem emotionalen Hochzeitsfilm festhalten. Vom ersten Augenblick bis zum letzten gemeinsamen Moment war es mein Ziel, die einzigartigen Augenblicke authentisch einzufangen.
+
+      <p class="event-interest">Interesse?</p>
+
+      <a href="../contact.html" class="event-button">
+        Hier zu deinem Hochzeitsfilm
+      </a>
+    </div>
+
+
+</main>
+
+
+<script>
+  const burger = document.querySelector('.burger');
+  const navbar = document.querySelector('.navbar');
+
+  burger.addEventListener('click', () => {
+    navbar.classList.toggle('menu-open');
+  });
+</script>
+
+</body>
+</html>

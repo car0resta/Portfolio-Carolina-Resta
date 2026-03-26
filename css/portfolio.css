@@ -138,7 +138,7 @@ body, html {
 /* Contact Section */
 .contact-section {
   text-align: center;
-  margin-top: 0.5rem;
+  margin-top: 0.2rem;
 }
 
 .contact-text {
@@ -443,6 +443,20 @@ body, html {
     align-items: start; /* Text oben ausrichten */
 }
 
+.car-rouge-hero-grid .event-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* bleibt gleich */
+    margin-top: 0; /* wichtig: kein zusätzlicher Versatz */
+    align-self: start; /* sorgt dafür, dass die Spalte oben am Grid startet */
+}
+
+
+.car-rouge-hero-grid .event-image {
+    display: block; /* wichtig, dass Grid die Höhe erkennt */
+}
+
+
 .car-rouge-hero-grid .video-wrapper {
     position: relative;
     width: 100%;
@@ -458,17 +472,32 @@ body, html {
 }
 
 .car-rouge-hero-grid .event-content {
-    align-self: start; /* Text oben */
-    margin-top: -4rem; /* feinjustierung, je nach gewünschtem Versatz */
+    margin-top: 0; /* auf Höhe des Videos starten */
 }
 
 .event-hero {
-    padding-top: 12rem; /* Abstand zum Header */
+    padding-top: 10rem; /* Abstand zum Header */
     padding-left: 2rem;
     padding-right: 2rem;
-    padding-bottom: 4rem;
+    padding-bottom: 2rem;
 }
 
+.event-title {
+    margin-bottom: 0.5rem; /* Abstand zum Fließtext verkleinern */
+}
+
+.event-description {
+    margin-top: 0;          /* kein zusätzlicher Abstand */
+}¨
+
+.event-interest {
+    margin-bottom: 0.5rem; /* Abstand zum Button verkleinern */
+}
+
+.event-button {
+    padding: 0.5rem 1.5rem; /* kleinerer Abstand innen */
+    font-size: 1.2rem;       /* kleinere Schrift */
+}
 /* =========  Feuerwehr Wuernlos  ========= */
 
 .feuerwehr-hero-grid {
