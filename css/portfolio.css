@@ -118,6 +118,11 @@ body, html {
   object-position: center 30%;
 }
 
+.img-david {
+    object-position: center 10%; /* zeigt den oberen Bereich des Bildes */
+}
+
+
 /* Titel im unteren Drittel */
 .card-title {
   position: absolute;
@@ -439,18 +444,17 @@ body, html {
     grid-template-columns: 1.4fr 1fr; /* Video breiter, Text rechts schmaler */
     gap: 4rem;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 5rem auto;
     align-items: start; /* Text oben ausrichten */
 }
 
 .car-rouge-hero-grid .event-content {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* bleibt gleich */
-    margin-top: 0; /* wichtig: kein zusätzlicher Versatz */
-    align-self: start; /* sorgt dafür, dass die Spalte oben am Grid startet */
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: -4.8rem;
 }
-
 
 .car-rouge-hero-grid .event-image {
     display: block; /* wichtig, dass Grid die Höhe erkennt */
@@ -471,32 +475,10 @@ body, html {
     height: 100%;
 }
 
-.car-rouge-hero-grid .event-content {
-    margin-top: 0; /* auf Höhe des Videos starten */
-}
-
-.event-hero {
-    padding-top: 10rem; /* Abstand zum Header */
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-bottom: 2rem;
-}
-
-.event-title {
-    margin-bottom: 0.5rem; /* Abstand zum Fließtext verkleinern */
-}
-
-.event-description {
-    margin-top: 0;          /* kein zusätzlicher Abstand */
-}¨
-
-.event-interest {
-    margin-bottom: 0.5rem; /* Abstand zum Button verkleinern */
-}
 
 .event-button {
     padding: 0.5rem 1.5rem; /* kleinerer Abstand innen */
-    font-size: 1.2rem;       /* kleinere Schrift */
+    font-size: 1.7rem;       /* kleinere Schrift */
 }
 /* =========  Feuerwehr Wuernlos  ========= */
 

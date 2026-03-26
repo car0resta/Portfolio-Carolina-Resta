@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nadine</title>
+  <link rel="stylesheet" href="/css/portfolio.css">
+  <link href="https://fonts.googleapis.com/css2?family=Birthstone&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+ <nav class="navbar">
+    <button class="burger" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <a href="/index.html">Home</a>
+    <a href="/html/aboutme.html">About me</a>
+    <a href="/index.html"><img src="/media/logo.png" alt="Logo" class="logo"></a>
+    <a href="/html/portfolio.html" class="active">Portfolio</a>
+    <a href="/html/contact.html">Contact</a>
+  </nav>
+
+</header>
+
+<!-- HERO SECTION -->
+  <section class="event-hero">
+    <div class="event-hero-grid">
+
+      <!-- Bild links -->
+      <div class="event-image">
+        <img src="/media/portfolio/analog/analog04.jpg" alt="Nadine">
+      </div>
+
+      <!-- Text rechts -->
+      <div class="event-content">
+        <h1 class="event-title">Nadine</h1>
+
+        <p class="event-description">
+         Zusammen mit Selma Sahin setzten wir unser gemeinsames Projekt „Analog“ um. Unser Ziel war es die analoge Fotografie intensiver zu erkunden. Wir organisierten ein Fotoshooting mit Nadine Brändli am Lago di Palpuogna und entwickelten die Bilder später gemeinsam mit Unterstützung des Film Labs.</p> 
+
+        <a href="../contact.html" class="event-button">
+          Hier zu deinem Fotoshooting
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- GALLERY SECTION -->
+  <section class="event-insight">
+    <h2 class="section-title">Galerie</h2>
+
+    <div class="gallery-grid">
+      <img src="/media/portfolio/analog/analog01.jpg" alt="Bild 1" class="zoomable">
+      <img src="/media/portfolio/analog/analog02.jpg" alt="Bild 2" class="zoomable">
+      <img src="/media/portfolio/analog/analog03.jpg" alt="Bild 3" class="zoomable">
+      <img src="/media/portfolio/analog/analog04.jpg" alt="Bild 4" class="zoomable">
+      <img src="/media/portfolio/analog/analog05.jpg" alt="Bild 5" class="zoomable">
+      <img src="/media/portfolio/analog/analog06.jpg" alt="Bild 6" class="zoomable">
+      <img src="/media/portfolio/analog/analog07.jpg" alt="Bild 7" class="zoomable">
+      <img src="/media/portfolio/analog/analog08.jpg" alt="Bild 8" class="zoomable">
+      <img src="/media/portfolio/analog/analog09.jpg" alt="Bild 9" class="zoomable">
+      <img src="/media/portfolio/analog/analog10.jpg" alt="Bild 10" class="zoomable">
+      <img src="/media/portfolio/analog/analog11.jpg" alt="Bild 11" class="zoomable">
+      <img src="/media/portfolio/analog/analog12.jpg" alt="Bild 12" class="zoomable">
+      <img src="/media/portfolio/analog/analog13.jpg" alt="Bild 13" class="zoomable">
+      <img src="/media/portfolio/analog/analog14.jpg" alt="Bild 14" class="zoomable">
+      <img src="/media/portfolio/analog/analog18.jpg" alt="Bild 18" class="zoomable">
+      <img src="/media/portfolio/analog/nadine02.jpg" alt="Bild 20" class="zoomable">
+      <img src="/media/portfolio/analog/nadine03.jpg" alt="Bild 21" class="zoomable">
+       
+      
+    </div>
+
+  </section>
+
+</main>
+
+<!-- ZOOM MODAL -->
+<div id="zoom-modal" class="zoom-modal">
+  <span class="close">&times;</span>
+  <img class="zoom-modal-content" id="zoom-img">
+</div>
+
+<script>
+  // Zoom functionality
+  const modal = document.getElementById("zoom-modal");
+  const modalImg = document.getElementById("zoom-img");
+  const images = document.querySelectorAll(".zoomable");
+  const closeBtn = document.querySelector(".close");
+
+  images.forEach(img => {
+    img.addEventListener("click", () => {
+      modal.style.display = "block";
+      modalImg.src = img.src;
+    });
+  });
+
+  closeBtn.onclick = () => modal.style.display = "none";
+</script>
+
+
+<script>
+  const burger = document.querySelector('.burger');
+  const navbar = document.querySelector('.navbar');
+
+  burger.addEventListener('click', () => {
+    navbar.classList.toggle('menu-open');
+  });
+</script>
+
+</body>
+</html>

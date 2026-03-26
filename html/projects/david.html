@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>David</title>
+  <link rel="stylesheet" href="/css/portfolio.css">
+  <link href="https://fonts.googleapis.com/css2?family=Birthstone&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+ <nav class="navbar">
+    <button class="burger" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <a href="/index.html">Home</a>
+    <a href="/html/aboutme.html">About me</a>
+    <a href="/index.html"><img src="/media/logo.png" alt="Logo" class="logo"></a>
+    <a href="/html/portfolio.html" class="active">Portfolio</a>
+    <a href="/html/contact.html">Contact</a>
+  </nav>
+
+</header>
+
+<!-- HERO SECTION -->
+  <section class="event-hero">
+    <div class="event-hero-grid">
+
+      <!-- Bild links -->
+      <div class="event-image">
+        <img src="/media/portfolio/David/david04.jpg" alt="David">
+      </div>
+
+      <!-- Text rechts -->
+      <div class="event-content">
+        <h1 class="event-title">David</h1>
+
+        <p class="event-description">
+         David benötigte neue Bilder für sein CV. Gesagt, getan: Ich übernahm das gesamte Shooting, die Bildbearbeitung und die Aufbereitung, um seine Persönlichkeit und Professionalität optimal zur Geltung zu bringen.
+        <p class="event-interest">Interesse?</p>
+
+        <a href="../contact.html" class="event-button">
+          Hier zu deinem Fotoshooting
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- GALLERY SECTION -->
+  <section class="event-insight">
+    <h2 class="section-title">Galerie</h2>
+
+    <div class="gallery-grid">
+      <img src="/media/portfolio/David/david01.jpg" alt="Bild 29" class="zoomable">
+      <img src="/media/portfolio/David/david02.jpg" alt="Bild 30" class="zoomable">
+      <img src="/media/portfolio/David/david03.jpg" alt="Bild 31" class="zoomable">
+      <img src="/media/portfolio/David/david04.jpg" alt="Bild 32" class="zoomable">
+      <img src="/media/portfolio/David/david05.jpg" alt="Bild 33" class="zoomable">
+      <img src="/media/portfolio/David/david06.jpg" alt="Bild 34" class="zoomable">
+      <img src="/media/portfolio/David/david07.jpg" alt="Bild 35" class="zoomable">
+      <img src="/media/portfolio/David/david08.jpg" alt="Bild 36" class="zoomable">
+      <img src="/media/portfolio/David/david09.jpg" alt="Bild 37" class="zoomable">
+    </div>
+  </section>
+
+</main>
+
+<!-- ZOOM MODAL -->
+<div id="zoom-modal" class="zoom-modal">
+  <span class="close">&times;</span>
+  <img class="zoom-modal-content" id="zoom-img">
+</div>
+
+<script>
+  // Zoom functionality
+  const modal = document.getElementById("zoom-modal");
+  const modalImg = document.getElementById("zoom-img");
+  const images = document.querySelectorAll(".zoomable");
+  const closeBtn = document.querySelector(".close");
+
+  images.forEach(img => {
+    img.addEventListener("click", () => {
+      modal.style.display = "block";
+      modalImg.src = img.src;
+    });
+  });
+
+  closeBtn.onclick = () => modal.style.display = "none";
+</script>
+
+
+<script>
+  const burger = document.querySelector('.burger');
+  const navbar = document.querySelector('.navbar');
+
+  burger.addEventListener('click', () => {
+    navbar.classList.toggle('menu-open');
+  });
+</script>
+
+</body>
+</html>
