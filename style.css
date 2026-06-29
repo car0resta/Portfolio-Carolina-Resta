@@ -184,6 +184,37 @@ body, html {
   background-color: #642226; 
 }
 
+/* =========  BACHELOR PROJECT  ========= */
+#bachelor {
+  background-color: #642226;
+  text-align: center;
+  padding: 3rem 2rem;
+  border-top: 1px solid rgba(100, 34, 38, 0.15);
+  border-bottom: 1px solid rgba(100, 34, 38, 0.15);
+}
+
+.bachelor-label {
+  font-family: "Alumni Sans", sans-serif;
+  font-size: 2rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #D6B896;
+  margin: 0 0 0.75rem;
+}
+
+.bachelor-text {
+  font-family: "Alumni Sans", sans-serif;
+  font-size: 1.3rem;
+  line-height: 1.7;
+  color: #1a1a1a;
+  max-width: 680px;
+  margin: 0 auto 1.75rem;
+}
+
+#bachelor .btn:hover {
+  background-color: #72217e;
+}
+
 /* =========  OFFERS SECTION  ========= */
 #offers {
   position: relative; /* Container für absolut positionierte Überschrift */
